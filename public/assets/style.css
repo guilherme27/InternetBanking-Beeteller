@@ -1,0 +1,74 @@
+@font-face {
+  font-family: 'Beeteller-Icons';
+  src:
+    url('fonts/Beeteller-Icons.ttf?gxwi7j') format('truetype'),
+    url('fonts/Beeteller-Icons.woff?gxwi7j') format('woff'),
+    url('fonts/Beeteller-Icons.svg?gxwi7j#Beeteller-Icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Beeteller-Icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.b-arrow-right:before {
+  content: "\e900";
+}
+.b-bank:before {
+  content: "\e901";
+}
+.b-bar-code:before {
+  content: "\e902";
+}
+.b-arrow-top-right:before {
+  content: "\e903";
+}
+.b-credit-card:before {
+  content: "\e904";
+}
+.b-arrow-broke-down:before {
+  content: "\e905";
+}
+.b-extract:before {
+  content: "\e906";
+}
+.b-graphic-2:before {
+  content: "\e907";
+}
+.b-graphic:before {
+  content: "\e908";
+}
+.b-grapphic-3:before {
+  content: "\e909";
+}
+.b-menu:before {
+  content: "\e90b";
+}
+.b-money:before {
+  content: "\e90c";
+}
+.b-notification:before {
+  content: "\e90d";
+}
+.b-shop:before {
+  content: "\e90e";
+}
+.b-arrow-broke-up:before {
+  content: "\e90f";
+}
+.b-wallet:before {
+  content: "\e910";
+}
