@@ -1,8 +1,12 @@
 import { styled } from 'styled-components';
 
-import { TypographyProps } from './typography.atom';
+type TypographyProps = {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  color?: 'base' | 'white' | 'dark' | 'success' | 'danger' | 'light' | 'neutralBase';
+  $bold?: boolean;
+};
 
-export const Typography = styled.p<TypographyProps & { $bold: boolean }>`
+export const Typography = styled.p<TypographyProps>`
   white-space: nowrap;
   margin: 0;
   padding: 0;

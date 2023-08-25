@@ -1,6 +1,6 @@
 import * as S from './typography.styles';
 
-export type TypographyProps = {
+type TypographyProps = {
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'base' | 'white' | 'dark' | 'success' | 'danger' | 'light' | 'neutralBase';
   bold?: boolean;
