@@ -1,42 +1,47 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-const minWidth = 5.938;
-
-export const Button = styled.button`
+export const Button = styled.button<{ $isExpandable: boolean; $expand: boolean }>`
   display: flex;
   padding-inline: 1rem;
   border: none;
   gap: 1rem;
   height: 3rem;
   min-width: 4.938rem;
-  max-width: min-content;
   align-items: center;
-  border-radius: 0.5rem;
+  white-space: nowrap;
+  max-width: min-content;
   justify-content: center;
-  background-color: #ebb932;
+  border-radius: ${({ theme }) => theme.border.radius.soft};
+  background-color: ${({ theme }) => theme.colors.primary.accent};
 
   span {
-    font-weight: 600;
+    /* font-weight: ${({ theme }) => theme.fonts.weight.base}; */
     white-space: nowrap;
     text-align: center;
-    font-size: 0.875rem;
-    line-height: 1rem;
+    font-size: ${({ theme }) => theme.fonts.size.sm};
+    line-height: ${({ theme }) => theme.fonts.size.md};
   }
 
   &:hover {
-    background-color: #f1cd6d;
+    background-color: ${({ theme }) => theme.colors.primary.accentLight};
   }
-`;
 
-export const GrowButton = styled(Button)`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-width: ${minWidth}rem;
-  transition-property: all;
-  transition-duration: 0.5s;
+  ${({ $expand, $isExpandable }) =>
+    $isExpandable &&
+    css`
+      justify-content: space-between;
+      min-width: 5.938rem;
+      transition-property: all;
+      transition-duration: 0.5s;
 
-  &:hover {
-    min-width: 15.6rem;
-  }
+      ${$expand &&
+      css`
+        min-width: 15.6rem;
+        background-color: ${({ theme }) => theme.colors.primary.accentLight};
+      `}
+
+      &:hover {
+        min-width: 15.6rem;
+      }
+    `}
 `;

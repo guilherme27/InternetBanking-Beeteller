@@ -1,18 +1,18 @@
+import { Icon } from '..';
+
 import * as S from './button.styles';
 
 type ButtonProps = {
-  grow?: boolean;
-  title: string;
+  isExpandable?: boolean;
+  isExpand?: boolean;
 } & React.HTMLAttributes<HTMLButtonElement>;
 
-const Button = ({ grow, title, ...props }: ButtonProps) => {
-  const ButtonComponent = grow ? S.GrowButton : S.Button;
-
+const Button = ({ isExpandable = false, isExpand = false, children, ...props }: ButtonProps) => {
   return (
-    <ButtonComponent {...props}>
-      <span>{title}</span>
-      {grow && <i className='b-arrow-right' />}
-    </ButtonComponent>
+    <S.Button $expand={isExpand} $isExpandable={isExpandable} {...props}>
+      {children}
+      {isExpandable && <Icon name='b-arrow-right' />}
+    </S.Button>
   );
 };
 
