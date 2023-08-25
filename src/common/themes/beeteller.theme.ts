@@ -28,10 +28,10 @@ const beetellerTheme = {
       danger: '#da1e28',
     },
     neutral: {
-      black: '#000000',
-      dark: '',
+      black: '#0f0f0f',
+      dark: '#666666',
       base: '#e0e0e0',
-      light: '',
+      light: '#fbfbfb',
       clean: '#ededed',
     },
   },
