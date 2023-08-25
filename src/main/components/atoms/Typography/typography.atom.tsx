@@ -2,17 +2,18 @@ import * as S from './typography.styles';
 
 export type TypographyProps = {
   size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'base' | 'white' | 'light' | 'success' | 'danger';
+  color?: 'base' | 'white' | 'dark' | 'success' | 'danger' | 'light' | 'neutralBase';
+  bold?: boolean;
 };
 
 const Typography = ({
   size = 'md',
   color = 'base',
+  bold = false,
   children,
-  ...props
 }: TypographyProps & React.HTMLAttributes<HTMLSpanElement>) => {
   return (
-    <S.Typography size={size} color={color} {...props}>
+    <S.Typography size={size} color={color} $bold={bold}>
       {children}
     </S.Typography>
   );
