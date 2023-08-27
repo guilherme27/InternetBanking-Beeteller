@@ -1,4 +1,6 @@
-import { render, expect, describe, it } from '@/common/helpers/test.helper';
+import { expect, describe, it } from 'vitest';
+
+import { render } from '@/common/helpers/test.helper';
 
 import CardNote from './card-note.atom';
 

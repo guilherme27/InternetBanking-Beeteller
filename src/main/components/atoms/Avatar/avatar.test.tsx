@@ -1,4 +1,6 @@
-import { render, screen, expect, describe, it } from '@/common/helpers/test.helper';
+import { expect, describe, it } from 'vitest';
+
+import { render, screen } from '@/common/helpers/test.helper';
 
 import { Avatar } from '..';
 
