@@ -1,7 +1,7 @@
-import beetellerTheme from '../themes/beeteller.theme';
+import { BeetellerTheme } from '../themes';
 import 'styled-components';
 
-type Theme = typeof beetellerTheme;
+type Theme = typeof BeetellerTheme;
 
 declare module 'styled-components' {
   export interface DefaultTheme extends Theme {}

@@ -7,10 +7,10 @@ import { CurrencyHelper } from '@/common/helpers';
 import { initialState } from '@/common/helpers/state.helper';
 import Grid from '@/common/styles/GridLayout/grid-item.layout';
 import Beeteller from '@/core/services/beeteller/beeteller.services';
+import { CircleButton, Icon, Typography, Image, Avatar } from '@/main/components/atoms';
+import { Card } from '@/main/components/molecules';
+import { Menu, OfferCard, CardList } from '@/main/components/organisms';
 
-import { CircleButton, Icon, Typography, Image, Avatar } from '../../atoms';
-import { Card } from '../../molecules';
-import { Menu, OfferCard, CardList } from '../../organisms';
 import * as S from './home.styles';
 
 const Home = () => {
@@ -55,17 +55,9 @@ const Home = () => {
       }
     };
 
-    if (!account) {
-      getInfoAccount();
-    }
-
-    if (!movement) {
-      getMoviments();
-    }
-
-    if (!offer) {
-      getOffers();
-    }
+    !account && getInfoAccount();
+    !movement && getMoviments();
+    !offer && getOffers();
   }, [offer, account, movement]);
 
   return (
