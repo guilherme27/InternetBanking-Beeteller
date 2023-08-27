@@ -6,11 +6,12 @@
   "scripts": {
     "start": "vite",
     "build": "tsc && vite build",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@types/node": "^20.5.4",
     "axios": "^1.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -19,6 +20,10 @@
     "styled-components": "^6.0.7"
   },
   "devDependencies": {
+    "@types/node": "^20.5.6",
+    "@testing-library/jest-dom": "^6.1.2",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.4.1",
@@ -31,10 +36,13 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "happy-dom": "^10.11.0",
+    "jest": "^29.6.4",
     "msw": "^1.2.4",
     "prettier": "^2.8.8",
     "typescript": "^5.2.2",
-    "vite": "^4.4.9"
+    "vite": "^4.4.9",
+    "vitest": "^0.34.3"
   },
   "msw": {
     "workerDirectory": "public"
