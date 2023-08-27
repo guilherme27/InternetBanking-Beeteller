@@ -5,9 +5,9 @@ import * as S from './menu.styles';
 
 type MenuProps = {
   sections: string[];
-};
+} & React.HTMLAttributes<HTMLDivElement>;
 
-const Menu = ({ sections }: MenuProps) => {
+const Menu = ({ sections, ...props }: MenuProps) => {
   const [selected, setSelected] = useState(0);
 
   const handleSelection = (index: number) => {
@@ -15,7 +15,7 @@ const Menu = ({ sections }: MenuProps) => {
   };
 
   return (
-    <S.Menu selected={selected}>
+    <S.Menu selected={selected} {...props}>
       {sections.map((item, index) => (
         <MenuItem selected={selected === index} title={item} key={index} onClick={() => handleSelection(index)} />
       ))}
