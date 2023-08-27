@@ -20,6 +20,7 @@ export type IconName =
   | 'b-arrow-top-right'
   | 'b-arrow-broke-down'
   | 'b-arrow-broke-up';
+
 export type IconProps = {
   name: IconName;
 
